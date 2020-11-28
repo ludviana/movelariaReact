@@ -1,0 +1,39 @@
+.conteudo_comprar{
+    display:flex;
+    justify-content: space-between;
+}
+.direita_comprar{
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.596);
+    width: 500px;
+    margin-right: 70px;
+    padding: 10px;
+}
+.esquerda_comprar{
+    text-align: center;
+    box-sizing: border-box;
+    width: 500px;
+    border: 1px solid rgba(128, 128, 128, 0.596);
+    margin-left: 70px;
+    padding: 10px;
+}
+
+.esquerda_comprar img{
+    width: 300px;
+}
+
+.infor{
+    display: flex;
+    justify-content:space-between;
+}
+
+.infor_esquerda{
+    margin-left: 70px;
+}
+.infor_direita{
+    margin-right: 70px;
+}
+form{
+    margin-top: 100px;
+}
+
