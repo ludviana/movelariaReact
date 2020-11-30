@@ -18,7 +18,7 @@ class Main extends React.Component{
         return(
             <div className="container-fluid text-justify ">
                 <div className="text-center mb-5" >
-                    <img src={logo} width="300px" />
+                    <img src={logo} alt="logo" width="300px" />
                 </div>
                 
                 <main className="container-fluid ">

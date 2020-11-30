@@ -30,6 +30,7 @@ import Main from './Main';
 import Sobre from './Sobre';
 import Contato from './Contato';
 import Produtos from './Produtos';
+import Pedido from './Pedido';
 
 
 
@@ -44,7 +45,7 @@ class Movelaria extends React.Component{
                     <Route path='/Sobre' component={Sobre} />
                     <Route path='/Contato' component={Contato} />
                     <Route path='/Produtos' component={Produtos} />
-                    
+                    <Route path='/Pedido' component={Pedido}/>
                 </Switch>
                 <Footer />
             </div>

@@ -5,6 +5,8 @@ import pagamento from '../armarios/logo pagamento.jpg';
 import Lateral from './Lateral';
 
 
+
+
 export default function Produtos(){
     
     const [produtos, setProdutos] = useState([]);
@@ -19,22 +21,29 @@ export default function Produtos(){
         fetchData();
     }, []);
 
-    return(
-        <div>
-            <section className="conteudo">
-                <div className="lateral">
+                    /*
                     {produtos && produtos.map(des =>  
                         <Lateral key={des.idProduto} categoria={des.categoria}/>
                     )}
+                    */
+    return(
+        <div>
+            <section className="conteudo">
+                
+                <div className="lateral">
+                    <Lateral />
                 </div>
+
+                
                 <div className="principal">
                     {produtos && produtos.map(item => 
                     
                     <Produto
                     key={item.idProduto} 
+                    a = {item.idProduto}
                     imagem={item.imagem} 
                     nome={item.nome} 
-                    preco={item.preco} 
+                    preco={item.precoProduto} 
                     categoria={item.categoria} 
                     descricao={item.descricao}/>)} 
                 </div>

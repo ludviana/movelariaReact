@@ -13,10 +13,10 @@ class Footer extends React.Component{
                         <div className="col-4 col-sm text-center">
                             <p className="b">Contato</p>
                             <div>
-                                <p><img src={email} width="40px" /> email@fullstack.com</p>
+                                <p><img src={email} alt="email" width="40px" /> email@fullstack.com</p>
                             </div>
                             <div>
-                                <p><img src={whats} width="40px" /> (11)1111-2222</p>
+                                <p><img src={whats} alt="telefone" width="40px" /> (11)1111-2222</p>
                             </div>
                         </div>
                         <div className="col-4 col-sm text-center">     
