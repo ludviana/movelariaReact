@@ -19,7 +19,7 @@ class Pedido extends React.Component{
     };
     
     render(){
-        console.log(this.state.id)
+        
         return(
             <div>
                <p>ata  {this.state.id}</p>

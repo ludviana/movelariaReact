@@ -18,7 +18,7 @@ class Menu extends React.Component{
                         <ul className="navbar-nav">
                         
                             <li className="nav-item">
-                                <Link className="nav-link text-white ml-5" to="./Produtos">Produtos</Link>
+                                <Link className="nav-link text-white ml-5" to="./PaginaProdutos">Produtos</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-white ml-5" to="./Sobre">Sobre</Link>
