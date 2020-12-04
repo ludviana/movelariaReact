@@ -4,6 +4,9 @@ import Lateral from './Lateral';
 import SelecionaProduto from './SelProd';
 
 export default function Produtos(){
+
+    
+
     
     return(
         <div>

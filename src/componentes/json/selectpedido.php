@@ -7,7 +7,7 @@
 
         $produto = $_GET['produto'];
         
-        $sql_select = "SELECT * FROM produtos WHERE idProduto = '$produto' ";
+        $sql_select = "SELECT * FROM produtos INNER JOIN precos ON precos.idPrecos = produtos.idProduto WHERE idProduto='$produto'";
 
         $resposta = mysqli_query($conexao,$sql_select);
 
