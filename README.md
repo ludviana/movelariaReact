@@ -24,4 +24,4 @@ Fiz a separação de projetos por Motivo de estar entrando em uma nova fase prop
 - [x] - Refatoração React (SPA)
 - [x] - Estilização utilizando Bootstrap
 - [x] - PHP fazendo requerimento em banco de dados e criando JSON 
-- [ ] - Conectando Duas tabelas do banco de dados atraves de inner Join
+- [x] - Conectando Duas tabelas do banco de dados atraves de inner Join
