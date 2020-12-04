@@ -1,4 +1,5 @@
 import React from 'react';
+import Comentarios from './comentarios';
 import email from '../../armarios/email2.png'
 import whats from '../../armarios/whats.png'
 
@@ -17,16 +18,41 @@ class Contato extends React.Component{
         fetch('http://localhost/movelaria/src/componentes/json/selectcoment.php')
         .then( comenta => comenta.json())
         .then( comenta => this.setState({'comentarios': comenta}));
+
     }
 
-    EnviarComentario(){
-        console.log('oi')
+
+
+
+    componentDidUpdate(){
+        this.EnviarComentario()
+        fetch('http://localhost/movelaria/src/componentes/json/selectcoment.php')
+        .then( comenta => comenta.json())
+        .then( comenta => this.setState({'comentarios': comenta}));
+        
+    }
+
+    async EnviarComentario(evento){
+        evento.preventDefault();
+
+        const url = 'http://localhost/movelaria/src/componentes/json/recebecoment.php';
+        const dados = new FormData(evento.target);
+        const cabecalho = {
+            method: "POST",
+            body: dados,
+        };
+
+        const resposta = await fetch(url,cabecalho);
+        
+        await resposta.json();
+        
+
     }
 
 
     render(){
 
-        let bgr = {backgroundColor: 'rgba(128, 128, 128, 0.596)'};
+        
         return(
             <div>
                 <div className="container-fluid text-center">
@@ -121,22 +147,7 @@ class Contato extends React.Component{
                 </div>
 
                 {this.state.comentarios.map(coment => (
-                    <section class="table table-striped table-borderless text-white" style={bgr}>
-                        <table>
-                            <tr>
-                                <th scope="col">N°msg</th>
-                                <th scope="col">Nome Cliente</th>
-                                <th scope="col">Tipo de msg</th>
-                                <th scope="col">Mensagem</th>
-                            </tr>              
-                            <tr>
-                                <td>{coment.id_comentarios}</td>
-                                <td>{coment.nome}</td>
-                                <td>{coment.tipo}</td>
-                                <td>{coment.mensagem}</td>
-                            </tr>
-                        </table>
-                    </section>
+                    <Comentarios key={coment.id_comentarios} id={coment.id_comentarios} nome={coment.nome} tipo={coment.tipo} mensagem={coment.mensagem}/>
                 ))}
             </div>
         );
