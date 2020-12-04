@@ -7,7 +7,7 @@ const [produtos, setProdutos] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
-            const resposta = await fetch('http://localhost/movelaria/src/componentes/json/jason.php')
+            const resposta = await fetch('http://localhost/movelaria/src/componentes/json/jasonprod.php')
     
             const dados = await resposta.json()
             setProdutos(dados);

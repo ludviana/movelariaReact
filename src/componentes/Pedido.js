@@ -16,7 +16,7 @@ class Pedido extends React.Component{
 
   
     componentDidMount(){                    
-        fetch('http://localhost/movelaria/src/componentes/json/envio.php?produto=4' )
+        fetch('http://localhost/movelaria/src/componentes/json/selectpedido.php?produto=4' )
         .then( resposta => resposta.json())
         .then(resposta => this.setState({'dados': resposta}));
                  

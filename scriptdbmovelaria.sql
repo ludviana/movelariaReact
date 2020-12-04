@@ -50,6 +50,8 @@ create table if not exists comentarios(
 	primary key(id_comentarios)
 );
 
+
+
 create table if not exists categorias (
 	idCategoria int auto_increment,
     nomecategoria varchar(30),
@@ -67,7 +69,7 @@ create table if not exists produtoCategoria(
     foreign key (idProduto) references produtos(idProduto)
 );
 
-
+SELECT * FROM produtos;
 
 insert into produtos values 
 	(null,'guardaRoupa','Guarda-roupa 6 portas','guarda2.jpg'),
@@ -109,6 +111,8 @@ insert into produtoCategoria values
 	(8,4),
 	(9,5);
     
+insert into comentarios values 
+	(null,'Lucas','masculino','lucasd.viana1993@gmail.com',99999999,'elogio','Testando os comentarios');
 
 /*
 drop database moveis;
