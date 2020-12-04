@@ -1,6 +1,6 @@
 import React from 'react';
-import email from '../armarios/email2.png'
-import whats from '../armarios/whats.png'
+import email from '../../armarios/email2.png'
+import whats from '../../armarios/whats.png'
 
 class Contato extends React.Component{
     constructor(){

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/comprar.css';
+import '../../css/comprar.css';
 import Produto from './Produto';
 
 
@@ -42,7 +42,7 @@ class Pedido extends React.Component{
                                 <div>
                                     <h3 className="mt-3">Informações sobre produto</h3>
                                     <div className="col-12 col-sm-10 col-md-5 mx-auto ">
-                                        <img src={require(`../armarios/${item.imagem}`).default} alt="Foto não carregou" className="mt-5" width="100%"/>
+                                        <img src={require(`../../armarios/${item.imagem}`).default} alt="Foto não carregou" className="mt-5" width="100%"/>
                                     </div>
                                     <div className="d-flex mt-4 justify-content-center">
                                         <div className="mr-5">

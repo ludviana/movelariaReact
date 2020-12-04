@@ -7,7 +7,7 @@ export default function Produto(props){
     return(
         <div className="produto" id={props.nome}>
             <figure>
-                <img src={require(`../armarios/${props.imagem}`).default} alt={props.descricao} title={props.descricao}/> 
+                <img src={require(`../../armarios/${props.imagem}`).default} alt={props.descricao} title={props.descricao}/> 
             </figure>
             <p className="mt-3"> {props.descricao}</p>
             <p className="vermelho ">R$ {props.preco}</p>

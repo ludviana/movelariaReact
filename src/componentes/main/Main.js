@@ -1,6 +1,6 @@
 import React from 'react';
-import intro from "../armarios/intro.png";
-import logo from '../armarios/logo Movelaria Fullstack-022.png';
+import intro from "../../armarios/intro.png";
+import logo from '../../armarios/logo Movelaria Fullstack-022.png';
 
 const figure = {
     boxSizing:'content-box'

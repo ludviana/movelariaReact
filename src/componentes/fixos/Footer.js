@@ -1,7 +1,7 @@
 import React from 'react';
-import '../css/index.css';
-import email from '../armarios/email2.png';
-import whats from '../armarios/whats.png';
+import '../../css/index.css';
+import email from '../../armarios/email2.png';
+import whats from '../../armarios/whats.png';
 
 
 class Footer extends React.Component{

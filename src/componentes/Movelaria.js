@@ -2,13 +2,13 @@ import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Menu from './Menu';
-import Footer from './Footer';
-import Main from './Main';
-import Sobre from './Sobre';
-import Contato from './Contato';
-import Produtos from './PaginaProdutos';
-import Pedido from './Pedido';
+import Menu from './fixos/Menu';
+import Footer from './fixos/Footer';
+import Main from './main/Main';
+import Sobre from './sobre/Sobre';
+import Contato from './contato/Contato';
+import Produtos from './produtos/PaginaProdutos';
+import Pedido from './produtos/Pedido';
 
 
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Produto from './Produto';
-import '../css/produtos.css';
+import '../../css/produtos.css';
 
 export default function SelecionaProduto(props){
 const [produtos, setProdutos] = useState([]);

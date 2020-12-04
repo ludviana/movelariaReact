@@ -1,5 +1,5 @@
-import '../css/produtos.css';
-import pagamento from '../armarios/logo pagamento.jpg';
+import '../../css/produtos.css';
+import pagamento from '../../armarios/logo pagamento.jpg';
 import Lateral from './Lateral';
 import SelecionaProduto from './SelProd';
 
