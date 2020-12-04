@@ -6,7 +6,9 @@ class Lateral extends React.Component{
 
         this.state= {
             categorias :''
+            
         }
+
         this.Categ = this.Categ.bind(this);
         this.Todos = this.Todos.bind(this);
         this.Verifica = this.Verifica.bind(this);

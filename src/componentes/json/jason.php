@@ -2,7 +2,10 @@
 
 require_once('./conexao.php');
 
-$sqlSelect = "SELECT * FROM produtos INNER JOIN precos ON produtos.idProduto = precos.idPrecos;";
+$sqlSelect = "SELECT * FROM produtos INNER JOIN produtoCategoria ON produtos.idProduto = produtoCategoria.idProduto 
+INNER JOIN categorias ON categorias.idCategoria = produtoCategoria.idCategoria 
+INNER JOIN precos ON precos.idPrecos = produtos.idProduto; ";
+
 
 $ligacao = mysqli_query($conexao,$sqlSelect);
 

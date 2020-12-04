@@ -26,7 +26,7 @@ const [produtos, setProdutos] = useState([]);
 
 
     {produtos && produtos.map(item =>
-        (cate.push(item.categoria))
+        (cate.push(item.nomecategoria))
         )}
 
     {produtos.map(item =>
@@ -54,7 +54,9 @@ const [produtos, setProdutos] = useState([]);
         )}
 
 let row = [];
+
 if(produtos.length > 0){ 
+    
         for(let i = 0 ; i < idPro.length ; i++){
             row.push(
             <Produto

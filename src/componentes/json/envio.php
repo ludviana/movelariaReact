@@ -1,22 +1,25 @@
 <?php
 
-require_once('../conexoes/conexao.php');
-
-    if(isset($_POST['prod']) && isset($_POST['nome']) && isset($_POST['ende']) && isset($_POST['tele']) && isset($_POST['qts']) ){
-
-        $produto = $_POST['prod'];
-        $nome = $_POST['nome'];
-        $endereco = $_POST['ende'];
-        $telefone = $_POST['tele'];
-        $quantidade = $_POST['qts'];
+    require_once('./conexao.php');
         
 
-        $slq_insert = "INSERT INTO pedidos(produtoPedido, nomeCliente,endereco,telefone,quantidade) VALUES ('$produto','$nome','$endereco','$telefone','$quantidade');";
+        
 
-        $res = mysqli_query($conexao,$slq_insert);
+        $produto = $_GET['produto'];
+        
+        $sql_select = "SELECT * FROM produtos WHERE idProduto = '$produto'";
 
-    }   
+        $resposta = mysqli_query($conexao,$sql_select);
 
-mysql_close($conexao);
+        header("Access-Control-Allow-Origin:*");
+
+       
+
+        print_r(json_encode($resposta->fetch_all(MYSQLI_ASSOC)));
+
+        
+    mysql_close($conexao);
+
+
 
 ?>

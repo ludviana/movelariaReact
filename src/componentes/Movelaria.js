@@ -12,20 +12,23 @@ import Pedido from './Pedido';
 
 
 
-
 class Movelaria extends React.Component{
     render(){
         return(
             <div >
                 <Menu />
                 <Switch>
+                    
                     <Route exact path='/' component={Main} />
-                    <Route path='/Sobre' component={Sobre} />
-                    <Route path='/Contato' component={Contato} />
-                    <Route path='/PaginaProdutos' component={Produtos} />
+                    <Route exact path='/Sobre' component={Sobre} />
+                    <Route exact path='/Contato' component={Contato} />
+                    <Route exact path='/PaginaProdutos' component={Produtos} />
                     <Route path='/Pedido' component={Pedido}/>
+                    
                 </Switch>
                 <Footer />
+                
+                        
             </div>
         )
     }
