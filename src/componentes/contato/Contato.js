@@ -25,11 +25,12 @@ class Contato extends React.Component{
 
 
     componentDidUpdate(){
-        this.EnviarComentario()
-        fetch('http://localhost/movelaria/src/componentes/json/selectcoment.php')
-        .then( comenta => comenta.json())
-        .then( comenta => this.setState({'comentarios': comenta}));
-        
+        if(this.EnviarComentario){
+
+            fetch('http://localhost/movelaria/src/componentes/json/selectcoment.php')
+            .then( comenta => comenta.json())
+            .then( comenta => this.setState({'comentarios': comenta}));
+        }
     }
 
     async EnviarComentario(evento){
