@@ -5,9 +5,6 @@ import SelecionaProduto from './SelProd';
 
 export default function Produtos(){
 
-    
-
-    
     return(
         <div>
             <section className="conteudo">

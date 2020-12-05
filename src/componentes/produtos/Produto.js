@@ -17,22 +17,25 @@ export default class Produto extends React.Component{
     Pegaid = (evento) =>{
         evento.preventDefault();
 
-        const click = evento.target.value
+        const click = this.props.a
 
         console.log(click);
 
-        <Pedido oi={evento.target.value} />
- 
         this.setState({
             redirect: true
         })
+        
     }
 
     render(){
         
         if(this.state.redirect){
-            return <Redirect to="/Pedido"/>
-            
+            return(
+                <div>
+                    <Pedido oi={this.props.a} />
+                    <Redirect to="/Pedido"/>
+                </div>
+            )
         }else{
             return(
 

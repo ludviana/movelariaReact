@@ -3,30 +3,40 @@ import Informacoes from './Informacoes'
 import '../../css/comprar.css';
 
 class Pedido extends React.Component{
+    
     constructor(props){
         super(props)
 
         this.state = {
             dados:[],
-            id: ''
+            id: this.props.oi
             
         }
-        this.setState.id = this.props.oi
+
+        this.Select = this.Select.bind(this);
+        
     };
 
+    async Select() {
+        const resposta = await fetch(`http://localhost/movelaria/src/componentes/json/selectpedido.php?produto=${this.state.id}` )
+        const dados = await resposta.json()
+        this.setState({'dados': dados});
+
+    }
+
   
-    componentDidMount(){                    
-        fetch(`http://localhost/movelaria/src/componentes/json/selectpedido.php?produto=3` )
-        .then( resposta => resposta.json())
-        .then(resposta => this.setState({'dados': resposta}));
-                 
+    componentDidMount(){  
+        this.Select()   
     }
 
     render(){
-
+        
+        
+        console.log(this.state.id)
+        
         return(
             <div>
-                {this.props.oi}
+                
                 {this.state.dados.map(item =>(
                     <Informacoes key={item.idProduto} id={item.idProduto} imagem={item.imagem} descricao={item.descricao} preco={item.precoProduto}/>
                 ))}
