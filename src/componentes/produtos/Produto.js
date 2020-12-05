@@ -14,17 +14,12 @@ export default class Produto extends React.Component{
         this.Pegaid = this.Pegaid.bind(this);
     }
 
-    Pegaid = (evento) =>{
-        evento.preventDefault();
-
-        const click = this.props.a
-
-        console.log(click);
+    Pegaid = () =>{
 
         this.setState({
             redirect: true
         })
-        
+
     }
 
     render(){
