@@ -1,32 +1,53 @@
-import {Link} from 'react-router-dom';
+import { Redirect } from 'react-router';
 import Pedido from './Pedido';
+import React from 'react';
 
 
-export default function Produto(props){
+export default class Produto extends React.Component{
+    constructor(props){
+        super(props)
 
-    const Pegaid = (evento) =>{
+        this.state = {
+            redirect: false
+        }
+    
+        this.Pegaid = this.Pegaid.bind(this);
+    }
+
+    Pegaid = (evento) =>{
         evento.preventDefault();
 
         const click = evento.target.value
 
         console.log(click);
 
-        <Pedido oi={click} />
-
+        <Pedido oi={evento.target.value} />
+ 
+        this.setState({
+            redirect: true
+        })
     }
 
-    return(
-        <div className="produto" id={props.nome}>
-            <figure>
-                <img src={require(`../../armarios/${props.imagem}`).default} alt={props.descricao} title={props.descricao}/> 
-            </figure>
-            <p className="mt-3"> {props.descricao}</p>
-            <p className="vermelho ">R$ {props.preco}</p>
-            <Link to='/Pedido'><button className="btn btn-primary mb-5 mt-3" value={props.a} onClick={Pegaid} >Comprar</button></Link>
-        </div>
+    render(){
         
-    );  
-};
+        if(this.state.redirect){
+            return <Redirect to="/Pedido"/>
+            
+        }else{
+            return(
 
-//variant="info" type="submit"
-//<button className="btn btn-primary mb-5 mt-3" onClick={Envia} value={props.a}>Comprar</button>
+                
+                <div className="produto" id={this.props.nome}>
+                   
+                    <figure>
+                        <img src={require(`../../armarios/${this.props.imagem}`).default} alt={this.props.descricao} title={this.props.descricao}/> 
+                    </figure>
+                    <p className="mt-3"> {this.props.descricao}</p>
+                    <p className="vermelho ">R$ {this.props.preco}</p>
+                    <button className="btn btn-primary mb-5 mt-3" value={this.props.a} onClick={this.Pegaid} >Comprar</button>
+                </div>
+            )
+        }
+    }
+
+};

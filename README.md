@@ -17,7 +17,7 @@ Fiz a separação de projetos por Motivo de estar entrando em uma nova fase prop
 
 #
 
-### Projeto em andamento e 80% refatorado para React (28/11/2020).
+### Projeto refatorado para React (04/12/2020).
 
 ### Condições para entrega do dia 04/12/2020:
 

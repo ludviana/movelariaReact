@@ -120,10 +120,14 @@ drop database moveis;
 select*from comentarios;
 select*from pedidos;
 select*from produtos;
-    
+
+
+
+
 select * from produtos inner join precos on produtos.idProduto = precos.idPrecos;
+
 select * from pedidos inner join produtos on pedidos.produtoPedido = produtos.idProduto 
-inner join precos on precos.idPrecos = produtos.idProduto;
+inner join precos on precos.idPrecos = produtos.idProduto where idPedido = (select max(idPedido)from pedidos);
     
 select * from produtos inner join produtoCategoria on produtos.idProduto = produtoCategoria.idProduto 
 inner join categorias on categorias.idCategoria = produtoCategoria.idCategoria 
