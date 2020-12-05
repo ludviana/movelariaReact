@@ -18,7 +18,7 @@ class Pedido extends React.Component{
     };
 
     async Select() {
-        const resposta = await fetch(`http://localhost/movelaria/src/componentes/json/selectpedido.php?produto=${this.state.id}` )
+        const resposta = await fetch(`http://localhost/movelaria/src/componentes/json/selectpedido.php?produto=3` )
         const dados = await resposta.json()
         this.setState({'dados': dados});
 
