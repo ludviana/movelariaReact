@@ -9,40 +9,25 @@ class Pedido extends React.Component{
 
         this.state = {
             dados:[],
-            id: this.props.oi
             
         }
-
-        this.Select = this.Select.bind(this);
-        
     };
 
-    async Select() {
-        const resposta = await fetch(`http://localhost/movelaria/src/componentes/json/selectpedido.php?produto=3` )
-        const dados = await resposta.json()
-        this.setState({'dados': dados});
-
-    }
-
-  
     componentDidMount(){  
-        this.Select()   
+        fetch(`http://localhost/movelaria/src/componentes/json/selectpedido.php?produto=${this.props.match.params.idprod}` )
+        .then( resposta => resposta.json())
+        .then(resposta => this.setState({'dados': resposta})); 
     }
 
-    render(){
-        
-        
-        console.log(this.state.id)
-        
+
+    render(){ 
         return(
             <div>
-                
                 {this.state.dados.map(item =>(
                     <Informacoes key={item.idProduto} id={item.idProduto} imagem={item.imagem} descricao={item.descricao} preco={item.precoProduto}/>
                 ))}
             </div>
-        )
-        
+        ) 
     };
 };
 

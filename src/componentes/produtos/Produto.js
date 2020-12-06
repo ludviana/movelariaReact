@@ -1,5 +1,6 @@
-import { Redirect } from 'react-router';
-import Pedido from './Pedido';
+
+import {Link} from 'react-router-dom';
+
 import React from 'react';
 
 
@@ -8,33 +9,12 @@ export default class Produto extends React.Component{
         super(props)
 
         this.state = {
-            redirect: false
+            redirect: false,
         }
-    
-        this.Pegaid = this.Pegaid.bind(this);
     }
 
-    Pegaid = () =>{
-
-        this.setState({
-            redirect: true
-        })
-
-    }
-
-    render(){
-        
-        if(this.state.redirect){
-            return(
-                <div>
-                    <Pedido oi={this.props.a} />
-                    <Redirect to="/Pedido"/>
-                </div>
-            )
-        }else{
-            return(
-
-                
+        render(){
+            return(  
                 <div className="produto" id={this.props.nome}>
                    
                     <figure>
@@ -42,10 +22,10 @@ export default class Produto extends React.Component{
                     </figure>
                     <p className="mt-3"> {this.props.descricao}</p>
                     <p className="vermelho ">R$ {this.props.preco}</p>
-                    <button className="btn btn-primary mb-5 mt-3" value={this.props.a} onClick={this.Pegaid} >Comprar</button>
+                    <Link to={{pathname:`/Pedido/${this.props.a}`}} className="btn btn-primary mb-5 mt-3">Pedido</Link>
                 </div>
             )
         }
-    }
+
 
 };
