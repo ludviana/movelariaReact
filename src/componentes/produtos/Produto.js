@@ -22,7 +22,7 @@ export default class Produto extends React.Component{
                     </figure>
                     <p className="mt-3"> {this.props.descricao}</p>
                     <p className="vermelho ">R$ {this.props.preco}</p>
-                    <Link to={{pathname:`/Pedido/${this.props.a}`}} className="btn btn-primary mb-5 mt-3">Pedido</Link>
+                    <Link to={{pathname:`/Pedido${this.props.a}`}} className="btn btn-primary mb-5 mt-3">Pedido</Link>
                 </div>
             )
         }

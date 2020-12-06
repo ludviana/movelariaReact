@@ -24,7 +24,7 @@ class Movelaria extends React.Component{
                     <Route exact path='/Sobre' component={Sobre} />
                     <Route exact path='/Contato' component={Contato} />
                     <Route exact path='/PaginaProdutos' component={Produtos} />
-                    <Route exact path='/Pedido/:idprod' component={Pedido}/>
+                    <Route exact path='/Pedido:idprod' component={Pedido}/>
                     <Route exact path='/Finalizando' component={Finalizando}/>
                     
                 </Switch>
