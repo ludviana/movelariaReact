@@ -14,8 +14,9 @@ export default class Produto extends React.Component{
     }
 
         render(){
+            
             return(  
-                <div className="produto" id={this.props.nome}>
+                <div className="produto" id={this.props.categoria}>
                    
                     <figure>
                         <img src={require(`../../armarios/${this.props.imagem}`).default} alt={this.props.descricao} title={this.props.descricao}/> 

@@ -5,8 +5,8 @@ class Lateral extends React.Component{
         super(props)
 
         this.state= {
-            categorias :''
-            
+            categorias :'',
+            recebe: []            
         }
 
         this.Categ = this.Categ.bind(this);
@@ -49,6 +49,12 @@ class Lateral extends React.Component{
         
     }
 
+    componentDidMount(){
+        fetch('http://localhost/movelaria/src/componentes/json/categoria.php')
+        .then(recebido => recebido.json())
+        .then(recebido => this.setState({'recebe':recebido}));
+    }
+
 
     render(){
         
@@ -61,15 +67,11 @@ class Lateral extends React.Component{
                 <li className="list-group-item active" ><h3>Produtos</h3></li>
                 <li className="list-group-item list-group-item-action" style={estilo} id="" onClick={this.Verifica}>Todos</li>
 
-                <li className="list-group-item list-group-item-action" id="guardaRoupa" onClick={this.Verifica} style={estilo} >Guarda-Roupas</li>
-
-                <li className="list-group-item list-group-item-action" style={estilo} id="cozinha" onClick={this.Verifica}>Cozinhas</li>
-
-                <li className="list-group-item list-group-item-action" style={estilo} id="painelTV" onClick={this.Verifica}>Painel-de-TV</li>
-
-                <li className="list-group-item list-group-item-action" style={estilo} id="armarioAlto" onClick={this.Verifica}>Armario-Alto</li>
-
-                <li className="list-group-item list-group-item-action" style={estilo} id="armarioPequeno" onClick={this.Verifica}>Armario-pequeno</li>
+                {this.state.recebe.map(cats => (
+                        
+                    <li key={cats.idCategoria} className="list-group-item list-group-item-action" id={cats.nomecategoria} onClick={this.Verifica} style={estilo} >{cats.nomecategoria}</li>
+                    
+                ))}
             </ul>
         
         );

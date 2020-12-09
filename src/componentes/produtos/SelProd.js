@@ -15,6 +15,7 @@ const [produtos, setProdutos] = useState([]);
         fetchData();
     }, []);
 
+
     return(  
         
         <div className="principal">
