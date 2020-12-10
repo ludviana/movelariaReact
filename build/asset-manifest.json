@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d3036317.chunk.css",
+    "main.js": "/static/js/main.3a9df1f1.chunk.js",
+    "main.js.map": "/static/js/main.3a9df1f1.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fa3b7d48.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fa3b7d48.js.map",
+    "static/css/2.1a02f21c.chunk.css": "/static/css/2.1a02f21c.chunk.css",
+    "static/js/2.ab09dbef.chunk.js": "/static/js/2.ab09dbef.chunk.js",
+    "static/js/2.ab09dbef.chunk.js.map": "/static/js/2.ab09dbef.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.1a02f21c.chunk.css.map": "/static/css/2.1a02f21c.chunk.css.map",
+    "static/css/main.d3036317.chunk.css.map": "/static/css/main.d3036317.chunk.css.map",
+    "static/js/2.ab09dbef.chunk.js.LICENSE.txt": "/static/js/2.ab09dbef.chunk.js.LICENSE.txt",
+    "static/media/armamulti.jpg": "/static/media/armamulti.bec09ec6.jpg",
+    "static/media/cozinha.jpg": "/static/media/cozinha.34f1a5f5.jpg",
+    "static/media/cozinha2.png": "/static/media/cozinha2.9d474560.png",
+    "static/media/cozinha3.jpg": "/static/media/cozinha3.823924f7.jpg",
+    "static/media/email2.png": "/static/media/email2.11b14109.png",
+    "static/media/guarda2.jpg": "/static/media/guarda2.99474fdd.jpg",
+    "static/media/guarda3.jpg": "/static/media/guarda3.903694b3.jpg",
+    "static/media/guarda4.jpeg": "/static/media/guarda4.b4d5ce55.jpeg",
+    "static/media/home.jpg": "/static/media/home.8b164d3d.jpg",
+    "static/media/intro.png": "/static/media/intro.0b1109d2.png",
+    "static/media/logo Movelaria Fullstack-01.png": "/static/media/logo Movelaria Fullstack-01.4bf8e883.png",
+    "static/media/logo Movelaria Fullstack-02.png": "/static/media/logo Movelaria Fullstack-02.4138d666.png",
+    "static/media/logo Movelaria Fullstack-022.png": "/static/media/logo Movelaria Fullstack-022.b0e35b74.png",
+    "static/media/logo pagamento.jpg": "/static/media/logo pagamento.e15a09b0.jpg",
+    "static/media/whats.xcf": "/static/media/whats.1ca57a05.xcf",
+    "static/media/whats.png": "/static/media/whats.e8f06596.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fa3b7d48.js",
+    "static/css/2.1a02f21c.chunk.css",
+    "static/js/2.ab09dbef.chunk.js",
+    "static/css/main.d3036317.chunk.css",
+    "static/js/main.3a9df1f1.chunk.js"
+  ]
+}
