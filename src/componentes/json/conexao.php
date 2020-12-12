@@ -1,8 +1,8 @@
 <?php
-    $local = 'localhost';
-    $user = 'root';
+    $local = '18.229.150.67';
+    $user = 'lu';
     $db = 'moveis';
-    $pass = 'root';
+    $pass = 'Squad8!**';
 
     $conexao = mysqli_connect($local,$user,$pass,$db);
 
