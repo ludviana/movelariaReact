@@ -11,7 +11,7 @@ export default class Finalizando extends React.Component{
     }
 
     componentDidMount(){
-        fetch('http://18.229.150.67/jsonpedido.php')
+        fetch('https://testando.ddns.net/jsonpedido.php')
         .then(resp => resp.json())
         .then(resp => this.setState({'final': resp}))
     }

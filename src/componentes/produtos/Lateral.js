@@ -50,7 +50,7 @@ class Lateral extends React.Component{
     }
 
     componentDidMount(){
-        fetch('http://18.229.150.67/categoria.php')
+        fetch('https://testando.ddns.net/categoria.php')
         .then(recebido => recebido.json())
         .then(recebido => this.setState({'recebe':recebido}));
     }
