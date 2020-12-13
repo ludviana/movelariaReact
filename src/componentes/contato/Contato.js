@@ -15,7 +15,7 @@ class Contato extends React.Component{
     };
 
     componentDidMount(){
-        fetch('http://localhost/movelaria/src/componentes/json/selectcoment.php')
+        fetch('http://18.229.150.67/selectcoment.php')
         .then( comenta => comenta.json())
         .then( comenta => this.setState({'comentarios': comenta}));
 
@@ -27,7 +27,7 @@ class Contato extends React.Component{
     componentDidUpdate(){
         if(this.EnviarComentario){
 
-            fetch('http://localhost/movelaria/src/componentes/json/selectcoment.php')
+            fetch('http://18.229.150.67/selectcoment.php')
             .then( comenta => comenta.json())
             .then( comenta => this.setState({'comentarios': comenta}));
         }
@@ -36,7 +36,7 @@ class Contato extends React.Component{
     async EnviarComentario(evento){
         evento.preventDefault();
 
-        const url = 'http://localhost/movelaria/src/componentes/json/recebecoment.php';
+        const url = 'http://18.229.150.67/recebecoment.php';
         const dados = new FormData(evento.target);
         const cabecalho = {
             method: "POST",

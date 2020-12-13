@@ -14,7 +14,7 @@ class Pedido extends React.Component{
     };
 
     componentDidMount(){  
-        fetch(`http://localhost/movelaria/src/componentes/json/selectpedido.php?produto=${this.props.match.params.idprod}` )
+        fetch(`http://18.229.150.67/selectpedido.php?produto=${this.props.match.params.idprod}` )
         .then( resposta => resposta.json())
         .then(resposta => this.setState({'dados': resposta})); 
     }

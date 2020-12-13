@@ -15,7 +15,7 @@ export default class Informacoes extends React.Component{
     async EnviarPedido(event){
         event.preventDefault();
 
-        const url = 'http://localhost/movelaria/src/componentes/json/recebepedido.php';
+        const url = '18.229.150.67/recebepedido.php';
         const dads = new FormData(event.target);
         const cabecalho = {
             method: "POST",
