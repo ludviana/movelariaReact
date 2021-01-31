@@ -51,7 +51,6 @@ create table if not exists comentarios(
 );
 
 
-
 create table if not exists categorias (
 	idCategoria int auto_increment,
     nomecategoria varchar(30),
@@ -59,17 +58,14 @@ create table if not exists categorias (
     primary key(idCategoria)
 );
 
-
-
 create table if not exists produtoCategoria(
-	idProduto int,
-    idCategoria int,
+	idProduto_FK int,
+    idCategoria_FK int,
     
-    foreign key (idCategoria) references categorias(idCategoria),
-    foreign key (idProduto) references produtos(idProduto)
+    foreign key (idCategoria_FK) references categorias(idCategoria),
+    foreign key (idProduto_FK) references produtos(idProduto)
 );
 
-SELECT * FROM produtos;
 
 insert into produtos values 
 	(null,'guardaRoupa','Guarda-roupa 6 portas','guarda2.jpg'),
@@ -93,6 +89,8 @@ insert into precos values
 	(8,784.00),
 	(9,698.00);
     
+ 
+    
 insert into categorias values 
 	(null, 'Guarda Roupas'),
 	(null, 'Cozinhas'),
@@ -111,27 +109,12 @@ insert into produtoCategoria values
 	(8,4),
 	(9,5);
     
-insert into comentarios values 
-	(null,'Lucas','masculino','lucasd.viana1993@gmail.com',99999999,'elogio','Testando os comentarios');
+create view todos_produtos as 
+	SELECT * FROM produtos INNER JOIN produtoCategoria ON produtos.idProduto = produtoCategoria.idProduto_FK 
+	INNER JOIN categorias ON categorias.idCategoria = produtoCategoria.idCategoria_FK 
+	INNER JOIN precos ON precos.idPrecos = produtos.idProduto;
 
-/*
-drop database moveis;
+create view ultimo_pedido as 
+	SELECT * FROM pedidos INNER JOIN produtos ON pedidos.produtoPedido = produtos.idProduto 
+    INNER JOIN precos ON precos.idPrecos = produtos.idProduto WHERE idPedido = (SELECT max(idPedido)FROM pedidos);
 
-select*from comentarios;
-select*from pedidos;
-select*from produtos;
-
-
-
-
-select * from produtos inner join precos on produtos.idProduto = precos.idPrecos;
-
-select * from pedidos inner join produtos on pedidos.produtoPedido = produtos.idProduto 
-inner join precos on precos.idPrecos = produtos.idProduto where idPedido = (select max(idPedido)from pedidos);
-    
-select * from produtos inner join produtoCategoria on produtos.idProduto = produtoCategoria.idProduto 
-inner join categorias on categorias.idCategoria = produtoCategoria.idCategoria 
-inner join precos on precos.idPrecos = produtos.idProduto; 
-
-    
-*/
