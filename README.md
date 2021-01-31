@@ -25,3 +25,13 @@ Fiz a separação de projetos por Motivo de estar entrando em uma nova fase prop
 - [x] - Estilização utilizando Bootstrap
 - [x] - PHP fazendo requerimento em banco de dados e criando JSON 
 - [x] - Conectando Duas tabelas do banco de dados atraves de inner Join
+
+### Projeto node:
+
+A sua missão neste conteúdo será:
+
+- Configurar um servidor HTTP com Node.Js
+- Realizar a conexão com o banco de dados
+- Criar uma interface para retorno do dados de BD em formato JSON
+- Realizar o refactory (reconstrução) do projeto substituindo a parte back-end anteriormente construída em PHP pelo back-end Node.Js.
+
