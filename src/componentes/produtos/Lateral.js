@@ -50,9 +50,9 @@ class Lateral extends React.Component{
     }
 
     componentDidMount(){
-        fetch('https://testando.ddns.net/categoria.php')
+        fetch('http://localhost:3501/categorias')
         .then(recebido => recebido.json())
-        .then(recebido => this.setState({'recebe':recebido}));
+        .then(recebido => this.setState({'recebe':recebido.categorias}));
     }
 
 
@@ -61,6 +61,7 @@ class Lateral extends React.Component{
         const estilo = {
             backgroundColor: 'rgba(128, 128, 128, 0.596)'
         }
+        
         return(
             
             <ul className="list-group ">

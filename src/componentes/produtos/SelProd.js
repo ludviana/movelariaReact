@@ -8,7 +8,7 @@ const [produtos, setProdutos] = useState([]);
     useEffect(() => {
         async function fetchData() {
             
-            const resposta = await fetch('https://testando.ddns.net/jasonprod.php')
+            const resposta = await fetch('http://localhost:3501/todos_produtos')
     
             const dados = await resposta.json()
             setProdutos(dados);
@@ -16,11 +16,10 @@ const [produtos, setProdutos] = useState([]);
         fetchData();
     }, []);
 
-
     return(  
         
         <div className="principal">
-            {produtos && produtos.map(item =>  (
+            {produtos.produtos && produtos.produtos.map(item =>  (
                 <Produto
                 
                     key={item.idProduto} 

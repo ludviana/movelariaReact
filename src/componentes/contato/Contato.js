@@ -15,39 +15,42 @@ class Contato extends React.Component{
     };
 
     componentDidMount(){
-        fetch('https://testando.ddns.net/selectcoment.php')
+        fetch('http://localhost:3501/comentarios')
         .then( comenta => comenta.json())
-        .then( comenta => this.setState({'comentarios': comenta}));
+        .then( comenta => this.setState({'comentarios': comenta.comentarios}));
 
     }
-
-
-
 
     componentDidUpdate(){
         if(this.EnviarComentario){
 
-            fetch('https://testando.ddns.net/selectcoment.php')
+            fetch('http://localhost:3501/comentarios')
             .then( comenta => comenta.json())
-            .then( comenta => this.setState({'comentarios': comenta}));
+            .then( comenta => this.setState({'comentarios': comenta.comentarios}));
         }
     }
 
     async EnviarComentario(evento){
         evento.preventDefault();
 
-        const url = 'https://testando.ddns.net/recebecoment.php';
-        const dados = new FormData(evento.target);
+        const url = 'http://localhost:3501/recebecomentario';
+        const dados = {
+            nome: evento.target.nome.value,
+            email: evento.target.emaile.value,
+            genero: evento.target.genero.value,
+            telefone: evento.target.telefone.value,
+            tipo: evento.target.tipomensagem.value,
+            mensagem: evento.target.mensagem.value
+        };
         const cabecalho = {
             method: "POST",
-            body: dados,
+            headers: {
+                "Content-Type": "application/json",
+              },
+            body:JSON.stringify(dados)
         };
 
-        const resposta = await fetch(url,cabecalho);
-        
-        await resposta.json();
-        
-
+        await fetch(url,cabecalho);
     }
 
 

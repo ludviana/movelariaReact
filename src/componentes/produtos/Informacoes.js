@@ -14,23 +14,33 @@ export default class Informacoes extends React.Component{
 
     async EnviarPedido(event){
         event.preventDefault();
+        
+        const url = 'http://localhost:3501/recebepedido';
+        
+        const dads = {
+            nome: event.target.nome.value,
+            produto: event.target.produto.value,
+            ende: event.target.ende.value,
+            tele: event.target.tele.value,
+            qts: event.target.qts.value
+        };
 
-        const url = 'https://testando.ddns.net/recebepedido.php';
-        const dads = new FormData(event.target);
         const cabecalho = {
             method: "POST",
-            body:dads,
-            
+            headers: {
+                "Content-Type": "application/json",
+              },
+            body:JSON.stringify(dads),
         };
-        const resp = await fetch(url,cabecalho);
+        await fetch(url,cabecalho);
 
-        await resp;
         this.setState({
             redirect: true
           })
     };
 
     render(){
+        console.log(this.state.redirect)
         if(this.state.redirect) {
             return <Redirect to="/Finalizando" />
           }
@@ -58,6 +68,7 @@ export default class Informacoes extends React.Component{
                     </div>
                     <div className="direita_comprar col-5 ml-5 mr-3 d-flex-column justify-content-center">
                         <h3 className="mt-3">Preencha os dados para envio</h3> 
+
                         <form className="mt-5 " onSubmit={this.EnviarPedido}>
                             <div className="form-group row ">
                             
