@@ -17,7 +17,7 @@ Fiz a separação de projetos por Motivo de estar entrando em uma nova fase prop
 
 #
 
-### Projeto refatorado para React (04/12/2020).
+#### Projeto refatorado para React (04/12/2020).
 
 ### Condições para entrega do dia 04/12/2020:
 
@@ -34,7 +34,7 @@ A sua missão neste conteúdo será:
 - Realizar a conexão com o banco de dados
 - Criar uma interface para retorno do dados de BD em formato JSON
 - Realizar o refactory (reconstrução) do projeto substituindo a parte back-end anteriormente construída em PHP pelo back-end Node.Js.
-### pasta contendo a soluçao -> (https://github.com/ludviana/movelariaReact/tree/master/servidor-moveis)
+#### pasta contendo a soluçao -> (https://github.com/ludviana/movelariaReact/tree/master/servidor-moveis)
 
 ## Projeto Nosql:
 A sua missão neste conteúdo será:
