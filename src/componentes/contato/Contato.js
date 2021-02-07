@@ -17,7 +17,7 @@ class Contato extends React.Component{
     componentDidMount(){
         fetch('http://localhost:3501/comentarios')
         .then( comenta => comenta.json())
-        .then( comenta => this.setState({'comentarios': comenta.comentarios}));
+        .then( comenta => this.setState({'comentarios': comenta}));
 
     }
 
@@ -26,7 +26,7 @@ class Contato extends React.Component{
 
             fetch('http://localhost:3501/comentarios')
             .then( comenta => comenta.json())
-            .then( comenta => this.setState({'comentarios': comenta.comentarios}));
+            .then( comenta => this.setState({'comentarios': comenta}));
         }
     }
 
@@ -151,7 +151,7 @@ class Contato extends React.Component{
                 </div>
 
                 {this.state.comentarios.map(coment => (
-                    <Comentarios key={coment.id_comentarios} id={coment.id_comentarios} nome={coment.nome} tipo={coment.tipo} mensagem={coment.mensagem}/>
+                    <Comentarios key={coment._id} nome={coment.nome} tipo={coment.tipo} mensagem={coment.mensagem}/>
                 ))}
             </div>
         );

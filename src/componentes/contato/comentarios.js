@@ -9,13 +9,11 @@ class Comentarios extends React.Component{
                 <table >
                     <tbody>
                         <tr>
-                            <th scope="col">N°msg</th>
                             <th scope="col">Nome Cliente</th>
                             <th scope="col">Tipo de msg</th>
                             <th scope="col">Mensagem</th>
                         </tr>              
                         <tr>
-                            <td>{this.props.id}</td>
                             <td>{this.props.nome}</td>
                             <td>{this.props.tipo}</td>
                             <td>{this.props.mensagem}</td>

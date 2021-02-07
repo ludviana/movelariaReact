@@ -35,3 +35,10 @@ A sua missão neste conteúdo será:
 - Criar uma interface para retorno do dados de BD em formato JSON
 - Realizar o refactory (reconstrução) do projeto substituindo a parte back-end anteriormente construída em PHP pelo back-end Node.Js.
 ### pasta contendo a soluçao -> (https://github.com/ludviana/movelariaReact/tree/master/servidor)
+
+## Projeto Nosql:
+A sua missão neste conteúdo será:
+
+-  Realizar o refactory (reconstrução) do projeto, substituindo pelo menos 1 (uma) funcionalidade para salvar e retornar dados do banco de dados NoSQL.
+
+### Realizei a alteração pedida em comentarios, criando uma collection em mongodb || pasta contendo a soluçao -> (https://github.com/ludviana/movelariaReact/tree/master/servidor)
