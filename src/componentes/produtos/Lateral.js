@@ -66,11 +66,11 @@ class Lateral extends React.Component{
             
             <ul className="list-group ">
                 <li className="list-group-item active" ><h3>Produtos</h3></li>
-                <li className="list-group-item list-group-item-action" style={estilo} id="" onClick={this.Verifica}>Todos</li>
+                <li className="list-group-item list-group-item-action text-white" style={estilo} id="" onClick={this.Verifica}>Todos</li>
 
                 {this.state.recebe.map(cats => (
                         
-                    <li key={cats.idCategoria} className="list-group-item list-group-item-action" id={cats.nomecategoria} onClick={this.Verifica} style={estilo} >{cats.nomecategoria}</li>
+                    <li key={cats.idCategoria} className="list-group-item list-group-item-action text-white" id={cats.nomecategoria} onClick={this.Verifica} style={estilo} >{cats.nomecategoria}</li>
                     
                 ))}
             </ul>

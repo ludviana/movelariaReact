@@ -17,20 +17,21 @@ const [produtos, setProdutos] = useState([]);
     }, []);
 
     return(  
-        
-        <div className="principal">
-            {produtos.produtos && produtos.produtos.map(item =>  (
-                <Produto
+        <div className="principal row">
+                {produtos.produtos && produtos.produtos.map(item =>  (
+                   
+
+                    <Produto
+                        key={item.idProduto} 
+                        a = {item.idProduto}
+                        imagem={item.imagem} 
+                        nome={item.nome} 
+                        preco={item.precoProduto} 
+                        categoria={item.nomecategoria} 
+                        descricao={item.descricao}
+                    />
                 
-                    key={item.idProduto} 
-                    a = {item.idProduto}
-                    imagem={item.imagem} 
-                    nome={item.nome} 
-                    preco={item.precoProduto} 
-                    categoria={item.nomecategoria} 
-                    descricao={item.descricao}
-                />
-            ))}
+                ))}
         </div>
     
     )

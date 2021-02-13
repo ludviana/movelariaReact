@@ -1,7 +1,9 @@
-import React from 'react';
-import Comentarios from './comentarios';
+import React,{ lazy, Suspense } from 'react';
 import email from '../../armarios/email2.png'
 import whats from '../../armarios/whats.png'
+import tempo from '../../armarios/tempo.svg'
+
+const Comentarios = lazy(() => import('./comentarios'))
 
 class Contato extends React.Component{
     constructor(){
@@ -149,10 +151,14 @@ class Contato extends React.Component{
                         </main>
                     </div>
                 </div>
-
-                {this.state.comentarios.map(coment => (
-                    <Comentarios key={coment._id} nome={coment.nome} tipo={coment.tipo} mensagem={coment.mensagem}/>
-                ))}
+                <Suspense fallback={<img src={tempo} alt="Carregando..." />}>
+                    {this.state.comentarios.map(coment => (
+                        
+                            <Comentarios key={coment._id} nome={coment.nome} tipo={coment.tipo} mensagem={coment.mensagem}/>
+                        
+                    
+                    ))}
+                </Suspense>   
             </div>
         );
     };

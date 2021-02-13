@@ -3,43 +3,16 @@
     font-size: 25px;
 }
 
-.conteudo{
-    margin-top: 50px;
-    display: flex;
-    width: 100%;
-
-}
-
-.lateral{
-    
-    width: 300px;
-    margin-left: 30px;
-}
-
-.lateral h3{
-    text-align: justify;
-    padding-left: 40px;
-}
 
 .lateral ul li{
-    list-style: none;
-    padding-bottom: 5px;
-    color:white;
     cursor: pointer;
 }
 
-.principal{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    
-    
 
-}
 
 .produto{
     text-align: center;
-    width: 30%;
+    width: 280px;
     padding: 0px;
     margin: auto;
 }
